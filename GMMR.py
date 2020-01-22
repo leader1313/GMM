@@ -60,7 +60,7 @@ def dot(x,y,z):
     return b
 
 def Gaussian_Distribution(x, D, mean, sigma):
-    E = np.exp((-1/2)*dot((x-mean),(inv(sigma)),(x-mean).T))
+    E = np.exp((-1/2)*dot((x-mean).T,(inv(sigma)),(x-mean)))
     y = (1/((2*np.pi)**(D/2)))*(1/((det(sigma))**(1/2)))*E        
     return y
 
